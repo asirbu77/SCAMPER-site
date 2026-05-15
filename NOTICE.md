@@ -1,3 +1,8 @@
+---
+layout: default
+title: Notice
+---
+
 # Notice
 
 Copyright &copy; 2026 Aidan Sirbu and co-authors.
