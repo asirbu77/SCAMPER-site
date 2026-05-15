@@ -1,0 +1,32 @@
+title: SCAMPER
+description: Project page for the SCAMPER paper.
+baseurl: "/SCAMPER-site"
+url: "https://aidansirbu.com"
+
+paper:
+  title: "A latent control model for realistic rodent motion"
+  authors:
+    - name: "Aidan Sirbu"
+      affiliations: [1]
+      url: "https://aidansirbu.com"
+    - name: "Co-author Name"
+      affiliations: [1, 2]
+      url: "#"
+  affiliations:
+    - id: 1
+      name: "McGill University"
+    - id: 2
+      name: "Affiliation Two"
+  venue: "Submitted to NeurIPS 2026"
+  links:
+    arxiv: "#"
+    pdf: "#"
+    code: "#"
+    video: "#"
+    bibtex: "#bibtex"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
