@@ -1,0 +1,59 @@
+- title: "Imitation"
+  folder: "1-Imitation"
+  videos:
+    - number: 1
+      description: "Imitation rollouts of the expert imitator."
+- title: "Prior Rollouts"
+  folder: "2-PriorRollouts"
+  videos:
+    - number: 2
+      description: "Behavioral diversity yielded by rolling out the behavior prior with low sampling noise."
+    - number: 3
+      description: "Limited behavioral diversity yielded by rolling out the motion prior with low sampling noise."
+    - number: 4
+      description: "Increase in behavioral diversity — and resulting decrease in motion realism — yielded by rolling out the motion prior with high sampling noise."
+- title: "Locomotion"
+  folder: "3-Locomotion"
+  videos:
+    - number: 5
+      description: "SCAMPER exhibiting a walking gait during the locomotion task (target speed: 30 cm/s)."
+    - number: 6
+      description: "SCAMPER exhibiting a trotting gait during the locomotion task (target speed: 50 cm/s)."
+    - number: 7
+      description: "SCAMPER exhibiting a galloping gait during the locomotion task (target speed: 70 cm/s)."
+    - number: 8
+      description: "SCAMPER exhibiting a galloping gait during the locomotion task (target speed: 120 cm/s)."
+    - number: 9
+      description: "MIMIC-MJX exhibiting a walking gait during the locomotion task (target speed: 30 cm/s)."
+    - number: 10
+      description: "Inability of MIMIC-MJX to generalize to a trotting gait during the locomotion task (target speed: 50 cm/s)."
+    - number: 11
+      description: "Inability of MIMIC-MJX to generalize to a galloping gait during the locomotion task (target speed: 70 cm/s)."
+    - number: 12
+      description: "Inability of the from-scratch model to perform a walking gait during the locomotion task (target speed: 30 cm/s)."
+    - number: 13
+      description: "Inability of the from-scratch model to perform a trotting gait during the locomotion task (target speed: 50 cm/s)."
+    - number: 14
+      description: "Inability of the from-scratch model to perform a galloping gait during the locomotion task (target speed: 70 cm/s)."
+- title: "Rearing"
+  folder: "4-Rearing"
+  videos:
+    - number: 15
+      description: "SCAMPER successfully completing the walk-then-rear task."
+    - number: 16
+      description: "Inability of MIMIC-MJX to complete the walk-then-rear task."
+    - number: 17
+      description: "Inability of the from-scratch model to complete the walk-then-rear task."
+- title: "Arena Foraging"
+  folder: "5-ArenaForage"
+  videos:
+    - number: 18
+      description: "SCAMPER (early training): the model relies on stochastic sampling of its behavior prior to explore the foraging task structure."
+    - number: 19
+      description: "SCAMPER (mid training): as the model begins to receive reward signals from successful treat collection during the foraging task, it rapidly switches between stochastic sampling of the behavior prior and residual control of its motion prior."
+    - number: 20
+      description: "SCAMPER (fully trained): the model relies mostly on residual control of its motion prior to exploit the learned foraging task structure."
+    - number: 21
+      description: "MIMIC-MJX (fully trained): the model struggles to move efficiently and cannot collect all the treats within the allotted time in the foraging task."
+    - number: 22
+      description: "From-scratch model (fully trained): the model collects all the treats in the foraging task but does so with deeply unnatural motion."

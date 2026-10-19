@@ -1,0 +1,36 @@
+---
+layout: default
+title: Supplementary Videos
+---
+
+<section class="supp-header">
+  <p class="back-link"><a href="{{ '/' | relative_url }}">&larr; Back to project page</a></p>
+  <h1 class="paper-title">Supplementary Videos</h1>
+  <ul class="links">
+    <li>
+      <a href="{{ '/assets/suppvids/supplementary-videos.zip' | relative_url }}" download>
+        <svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <title>Download</title>
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3 V15 M7 10 L12 15 L17 10 M4 17 V21 H20 V17"/>
+        </svg>
+        Download All (.zip)
+      </a>
+    </li>
+  </ul>
+</section>
+
+{% for group in site.data.supplementary_videos %}
+<section class="supp-group">
+  <h2>{{ group.title }}</h2>
+  {% for video in group.videos %}
+  <figure id="supp-video-{{ video.number }}">
+    <video controls preload="metadata">
+      <source src="{{ '/assets/suppvids/supplementary-videos/' | append: group.folder | append: '/SuppVid' | append: video.number | append: '.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <figcaption><strong>Supplementary Video {{ video.number }}.</strong> {{ video.description }}</figcaption>
+  </figure>
+  {% endfor %}
+</section>
+{% endfor %}
