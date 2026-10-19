@@ -49,6 +49,38 @@ a:hover { text-decoration: underline; }
 
 .authors li { font-size: clamp(0.95rem, 1.8vw, 1.3rem); }
 .affiliations li { color: var(--muted); font-size: clamp(0.85rem, 1.5vw, 1.1rem); }
+.corresponding {
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+}
+
+.institution-logos {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem 2.5rem;
+}
+.institution-logos img {
+  display: block;
+  height: clamp(36px, 6vw, 60px);
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+.institution-logos .logo-mcgill img {
+  height: clamp(44px, 7vw, 72px);
+  max-width: 280px;
+}
+.institution-logos .logo-harvard img,
+.institution-logos .logo-salk img,
+.institution-logos .logo-ucsd img {
+  height: clamp(52px, 8.5vw, 88px);
+}
 
 .venue {
   color: var(--muted);

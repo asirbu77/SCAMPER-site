@@ -11,7 +11,7 @@ layout: default
   <ol class="authors">
     {% for author in site.paper.authors %}
       <li>
-        <a href="{{ author.url }}">{{ author.name }}</a><sup>{{ author.affiliations | join: "," }}</sup>
+        {% if author.url %}<a href="{{ author.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}<sup>{{ author.affiliations | join: "," }}{% if author.email %},&#9993;{% endif %}</sup>
       </li>
     {% endfor %}
   </ol>
@@ -21,6 +21,10 @@ layout: default
       <li><sup>{{ aff.id }}</sup>{{ aff.name }}</li>
     {% endfor %}
   </ol>
+
+  {% for author in site.paper.authors %}{% if author.email %}
+  <p class="corresponding"><sup>&#9993;</sup><a href="mailto:{{ author.email }}">{{ author.email }}</a></p>
+  {% endif %}{% endfor %}
 
   <p class="venue">{{ site.paper.venue }}</p>
 
@@ -49,6 +53,15 @@ layout: default
     </li>
   </ul>
 </section>
+
+<ul class="institution-logos">
+  <li><img src="{{ '/assets/logos/google.png' | relative_url }}" alt="Google"></li>
+  <li><img src="{{ '/assets/logos/mila.png' | relative_url }}" alt="Mila – Quebec AI Institute"></li>
+  <li class="logo-mcgill"><img src="{{ '/assets/logos/mcgill.png' | relative_url }}" alt="McGill University"></li>
+  <li class="logo-harvard"><img src="{{ '/assets/logos/harvard.svg' | relative_url }}" alt="Harvard University"></li>
+  <li class="logo-salk"><img src="{{ '/assets/logos/salk.jpeg' | relative_url }}" alt="Salk Institute for Biological Studies"></li>
+  <li class="logo-ucsd"><img src="{{ '/assets/logos/ucsd.svg' | relative_url }}" alt="University of California San Diego"></li>
+</ul>
 
 <section id="abstract">
   <h2>Abstract</h2>
@@ -88,7 +101,7 @@ layout: default
 <section id="results">
   <h2>Imitation &amp; Random Motion Generation</h2>
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/imitation.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -96,7 +109,7 @@ layout: default
   </figure>
 
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/behaviorprior.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -104,7 +117,7 @@ layout: default
   </figure>
 
   <figure id="motionprior-fig">
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/motionprior.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -116,7 +129,7 @@ layout: default
   <h2>Locomotion Task</h2>
 
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/walk.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -124,7 +137,7 @@ layout: default
   </figure>
 
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/trot.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -132,7 +145,7 @@ layout: default
   </figure>
 
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/gallop.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -144,7 +157,7 @@ layout: default
   <h2>Rearing Task</h2>
 
   <figure id="rear-fig">
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/rear.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -160,7 +173,7 @@ layout: default
   </p>
 
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/scamper_forage_explore.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -168,7 +181,7 @@ layout: default
   </figure>
 
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/scamper_forage_earlyexploit.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -176,7 +189,7 @@ layout: default
   </figure>
 
   <figure>
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/scamper_forage_exploit.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -184,7 +197,7 @@ layout: default
   </figure>
 
   <figure id="baselines-forage-fig">
-    <video controls preload="auto">
+    <video controls preload="metadata">
       <source src="{{ '/assets/videos/baselines_forage.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -196,7 +209,7 @@ layout: default
   <h2>BibTeX</h2>
 {% raw %}<pre><code>@inproceedings{sirbu2026scamper,
   title     = {{SCAMPER}: A Latent Control Model for Realistic Rodent Motion},
-  author    = {Sirbu, Aidan and Others},
+  author    = {Sirbu, Aidan and Zhang, Charles Y. and Yang, Yuanjia and {\"O}lveczky, Bence P. and Pereira, Talmo D. and Richards, Blake A.},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   year      = {2026}
 }</code></pre>{% endraw %}

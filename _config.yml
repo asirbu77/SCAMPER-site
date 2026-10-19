@@ -7,17 +7,41 @@ paper:
   title: "A latent control model for realistic rodent motion"
   authors:
     - name: "Aidan Sirbu"
-      affiliations: [1]
+      affiliations: [1, 2, 3]
       url: "https://aidansirbu.com"
-    - name: "Co-author Name"
-      affiliations: [1, 2]
-      url: "#"
+      email: "aidan.sirbu@mail.mcgill.ca"
+    - name: "Charles Y. Zhang"
+      affiliations: [4]
+    - name: "Yuanjia Yang"
+      affiliations: [6, 7]
+    - name: "Bence P. Ölveczky"
+      affiliations: [5]
+    - name: "Talmo D. Pereira"
+      affiliations: [6]
+    - name: "Blake A. Richards"
+      affiliations: [1, 2, 3, 8, 9, 10]
   affiliations:
     - id: 1
-      name: "McGill University"
+      name: "Google, Paradigms of Intelligence Team"
     - id: 2
-      name: "Affiliation Two"
-  venue: "Submitted to NeurIPS 2026"
+      name: "Mila – Quebec AI Institute"
+    - id: 3
+      name: "School of Computer Science, McGill University"
+    - id: 4
+      name: "Harvard John A. Paulson School of Engineering and Applied Sciences"
+    - id: 5
+      name: "Department of Organismal and Evolutionary Biology, Harvard University"
+    - id: 6
+      name: "Salk Institute for Biological Studies"
+    - id: 7
+      name: "University of California San Diego"
+    - id: 8
+      name: "Department of Neurology and Neurosurgery, McGill University"
+    - id: 9
+      name: "Montreal Neurological Institute, McGill University"
+    - id: 10
+      name: "Learning in Machines and Brains Program, CIFAR"
+  venue: "NeurIPS 2026"
   links:
     arxiv: "#"
     pdf: "#"
