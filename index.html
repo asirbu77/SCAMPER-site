@@ -179,7 +179,7 @@ layout: default
   <h2>Arena Forage Task</h2>
 
   <p>
-    In order to effectively solve the arena foraging task, SCAMPER dynamically gates between stochastic sampling of its behavior prior (exploration) and residual control of its motion prior (exploitation). The task policy network outputs a gate logic, $\beta_t$, which is binarized to $b_t \in \{0,1\}$ via hysteresis thresholding. This mechanism allows SCAMPER to generate realistic motion during early exploration in absence of a reward signal. As the agent discovers treats and begins receiving a reward signal, SCAMPER begins relying on residual control of the motion prior to exploit the task structure.
+    In order to effectively solve the arena foraging task, SCAMPER dynamically gates between stochastic sampling of its behavior prior (exploration) and residual control of its motion prior (exploitation). The task policy network outputs a gate logit, $\beta_t$, which is binarized to $b_t \in \{0,1\}$ via hysteresis thresholding. This mechanism allows SCAMPER to generate realistic motion during early exploration in absence of a reward signal. As the agent discovers treats and begins receiving a reward signal, SCAMPER begins relying on residual control of the motion prior to exploit the task structure.
   </p>
 
   <figure>
